@@ -158,7 +158,7 @@ module DeviseTokenAuth
       @auth_params = {
         auth_token:     @token,
         client_id: @client_id,
-        uid:       @resource.uid,
+        uuid:       @resource.uuid,
         expiry:    @expiry,
         config:    @config
       }
