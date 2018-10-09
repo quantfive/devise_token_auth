@@ -232,20 +232,20 @@ class DeviseTokenAuth::RegistrationsControllerTest < ActionDispatch::Integration
         }
       end
 
-      test 'success should downcase uid if configured' do
+      test 'success should downcase uuid if configured' do
         @resource_class.case_insensitive_keys = [:email]
         post '/auth', params: @request_params
         assert_equal 200, response.status
         @data = JSON.parse(response.body)
-        assert_equal 'alternatingcase@example.com', @data['data']['uid']
+        assert_equal 'alternatingcase@example.com', @data['data']['uuid']
       end
 
-      test 'request should not downcase uid if not configured' do
+      test 'request should not downcase uuid if not configured' do
         @resource_class.case_insensitive_keys = []
         post '/auth', params: @request_params
         assert_equal 200, response.status
         @data = JSON.parse(response.body)
-        assert_equal 'AlternatingCase@example.com', @data['data']['uid']
+        assert_equal 'AlternatingCase@example.com', @data['data']['uuid']
       end
     end
 
@@ -423,8 +423,8 @@ class DeviseTokenAuth::RegistrationsControllerTest < ActionDispatch::Integration
         test 'message should be returned' do
           assert @data['message']
           assert_equal @data['message'],
-                       I18n.t('devise_token_auth.registrations.account_with_uid_destroyed',
-                              uid: @existing_user.uid)
+                       I18n.t('devise_token_auth.registrations.account_with_uuid_destroyed',
+                              uuid: @existing_user.uuid)
         end
         test 'existing user should be deleted' do
           refute User.where(id: @existing_user.id).first
@@ -485,7 +485,7 @@ class DeviseTokenAuth::RegistrationsControllerTest < ActionDispatch::Integration
               assert_equal @new_operating_thetan,
                            @existing_user.operating_thetan
               assert_equal @email, @existing_user.email
-              assert_equal @email, @existing_user.uid
+              assert_equal @email, @existing_user.uuid
             end
 
             test 'Case insensitive attributes update' do
@@ -495,7 +495,7 @@ class DeviseTokenAuth::RegistrationsControllerTest < ActionDispatch::Integration
               @existing_user.reload
               assert_equal @new_operating_thetan, @existing_user.operating_thetan
               assert_equal @email.downcase, @existing_user.email
-              assert_equal @email.downcase, @existing_user.uid
+              assert_equal @email.downcase, @existing_user.uuid
             end
 
             test 'Supply current password' do
@@ -840,7 +840,7 @@ class DeviseTokenAuth::RegistrationsControllerTest < ActionDispatch::Integration
         assert response.headers['token-type']
         assert response.headers['client']
         assert response.headers['expiry']
-        assert response.headers['uid']
+        assert response.headers['uuid']
       end
 
       test 'response token is valid' do

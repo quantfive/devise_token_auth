@@ -118,8 +118,8 @@ This is the overall workflow for a User to reset their password:
 
 - this `redirect_url` is a page on the frontend which contains a `password` and `password_confirmation` field
 
-- the user submits the form on this frontend page, which sends a request to API: `PUT /auth/password` with the `password` and `password_confirmation` parameters. In addition headers need to be included from the url params (you get these from the url as query params). A side note, ensure that the header names follow the convention outlined in `config/initializers/devise_token_auth.rb`; at this time of writing it is: `uid`, `client` and `access-token`.
-  - _Ensure that the `uid` sent in the headers is not URL-escaped. e.g. it should be bob@example.com, not bob%40example.com_
+- the user submits the form on this frontend page, which sends a request to API: `PUT /auth/password` with the `password` and `password_confirmation` parameters. In addition headers need to be included from the url params (you get these from the url as query params). A side note, ensure that the header names follow the convention outlined in `config/initializers/devise_token_auth.rb`; at this time of writing it is: `uuid`, `client` and `access-token`.
+  - _Ensure that the `uuid` sent in the headers is not URL-escaped. e.g. it should be bob@example.com, not bob%40example.com_
 
 - the API changes the user's password and responds back with a success message
 
@@ -142,11 +142,11 @@ If you get in any trouble configuring or overriding the behavior, you can check 
 ```ruby
 
   # create migration by running a command like this (where `User` is your USER_CLASS table):
-  # `rails g migration AddTokensToUsers provider:string uid:string tokens:text`
+  # `rails g migration AddTokensToUsers provider:string uuid:string tokens:text`
 
   def up
     add_column :users, :provider, :string, null: false, default: 'email'
-    add_column :users, :uid, :string, null: false, default: ''
+    add_column :users, :uuid, :string, null: false, default: ''
     add_column :users, :tokens, :text
 
     # if your existing User model does not have an existing **encrypted_password** column uncomment below line.
@@ -160,18 +160,18 @@ If you get in any trouble configuring or overriding the behavior, you can check 
     # finds all existing users and updates them.
     # if you change the default values above you'll also have to change them here below:
     User.find_each do |user|
-      user.uid = user.email
+      user.uuid = user.email
       user.provider = 'email'
       user.save!
     end
 
     # to speed up lookups to these columns:
-    add_index :users, [:uid, :provider], unique: true
+    add_index :users, [:uuid, :provider], unique: true
   end
 
   def down
     # if you added **encrypted_password** above, add here to successfully rollback
-    remove_columns :users, :provider, :uid, :tokens
+    remove_columns :users, :provider, :uuid, :tokens
   end
 
 ```

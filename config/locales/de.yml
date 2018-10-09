@@ -11,7 +11,7 @@ de:
       missing_confirm_success_url: "Fehlender Paramter 'confirm_success_url'."
       redirect_url_not_allowed: "Weiterleitung zu '%{redirect_url}' ist nicht gestattet."
       email_already_exists: "Es gibt bereits einen Account für '%{email}'."
-      account_with_uid_destroyed: "Account mit der uid '%{uid}' wurde gelöscht."
+      account_with_uuid_destroyed: "Account mit der uuid '%{uuid}' wurde gelöscht."
       account_to_destroy_not_found: "Der zu löschende Account kann nicht gefunden werden."
       user_not_found: "Benutzer kann nicht gefunden werden."
     passwords:

@@ -169,7 +169,7 @@ class DeviseTokenAuth::PasswordsControllerTest < ActionController::TestCase
               @expiry         = @qs['expiry']
               @reset_password = @qs['reset_password']
               @token          = @qs['token']
-              @uid            = @qs['uid']
+              @uuid            = @qs['uuid']
             end
 
             test 'response should have success redirect status' do
@@ -183,7 +183,7 @@ class DeviseTokenAuth::PasswordsControllerTest < ActionController::TestCase
               assert @expiry
               assert @reset_password
               assert @token
-              assert @uid
+              assert @uuid
             end
 
             test 'response auth params should be valid' do

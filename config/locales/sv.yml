@@ -11,7 +11,7 @@ sv:
       missing_confirm_success_url: "Saknar 'confirm_success_url'-parameter."
       redirect_url_not_allowed: "Omdirigering till '%{redirect_url}' ej tillåten."
       email_already_exists: "Det finns redan ett konto för '%{email}'"
-      account_with_uid_destroyed: "Kontot med UID '%{uid}' har tagits bort."
+      account_with_uuid_destroyed: "Kontot med uuid '%{uuid}' har tagits bort."
       account_to_destroy_not_found: "Kunde inte hitta kontot för borttagning."
       user_not_found: "Användaren hittades ej."
     passwords:

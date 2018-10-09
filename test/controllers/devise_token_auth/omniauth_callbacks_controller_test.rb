@@ -25,7 +25,7 @@ class OmniauthTest < ActionDispatch::IntegrationTest
     setup do
       OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(
         provider: 'facebook',
-        uid: '123545',
+        uuid: '123545',
         info: {
           name: 'chong',
           email: 'chongbong@aol.com'
@@ -243,13 +243,13 @@ class OmniauthTest < ActionDispatch::IntegrationTest
         # We have been forwarded to a url with all the expected
         # data in the query params.
 
-        # Assert that a uid was passed along.  We have to assume
+        # Assert that a uuid was passed along.  We have to assume
         # that the rest of the values were as well, as we don't
         # have access to @resource in this test anymore
-        assert(controller.params['uid'], 'No uid found')
+        assert(controller.params['uuid'], 'No uuid found')
 
         # check that all the auth stuff is there
-        %i[auth_token client_id uid expiry config].each do |key|
+        %i[auth_token client_id uuid expiry config].each do |key|
           assert(controller.params.key?(key), "No value for #{key.inspect}")
         end
       end
@@ -319,7 +319,7 @@ class OmniauthTest < ActionDispatch::IntegrationTest
       @user_email = 'slemp.diggler@sillybandz.gov'
       OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(
         provider: 'facebook',
-        uid: '123545',
+        uuid: '123545',
         info: {
           name: 'chong',
           email: @user_email

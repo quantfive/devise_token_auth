@@ -12,12 +12,12 @@ class UserTest < ActiveSupport::TestCase
     end
 
     describe 'creation' do
-      test 'save fails if uid is missing' do
+      test 'save fails if uuid is missing' do
         @resource = User.new
-        @resource.uid = nil
+        @resource.uuid = nil
         @resource.save
 
-        assert @resource.errors.messages[:uid]
+        assert @resource.errors.messages[:uuid]
       end
     end
 

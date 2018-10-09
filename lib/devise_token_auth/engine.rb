@@ -41,7 +41,7 @@ module DeviseTokenAuth
   self.headers_names                        = { 'access-token': 'access-token',
                                                 'client': 'client',
                                                 'expiry': 'expiry',
-                                                'uid': 'uid',
+                                                'uuid': 'uuid',
                                                 'token-type': 'token-type' }
   self.bypass_sign_in                       = true
 

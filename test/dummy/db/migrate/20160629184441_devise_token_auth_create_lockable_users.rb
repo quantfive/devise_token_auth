@@ -7,7 +7,7 @@ class DeviseTokenAuthCreateLockableUsers < ActiveRecord::Migration[4.2]
     create_table(:lockable_users) do |t|
       ## Required
       t.string :provider, null: false
-      t.string :uid, null: false, default: ''
+      t.string :uuid, null: false, default: ''
 
       ## Database authenticatable
       t.string :encrypted_password, null: false, default: ''
@@ -55,7 +55,7 @@ class DeviseTokenAuthCreateLockableUsers < ActiveRecord::Migration[4.2]
     end
 
     add_index :lockable_users, :email
-    add_index :lockable_users, [:uid, :provider],     unique: true
+    add_index :lockable_users, [:uuid, :provider],     unique: true
     # add_index :lockable_users, :reset_password_token, :unique => true
     # add_index :lockable_users, :confirmation_token,   :unique => true
     add_index :lockable_users, :unlock_token,         unique: true

@@ -33,14 +33,14 @@ DeviseTokenAuth.setup do |config|
   # config.check_current_password_before_update = :attributes
 
   # By default we will use callbacks for single omniauth.
-  # It depends on fields like email, provider and uid.
+  # It depends on fields like email, provider and uuid.
   # config.default_callbacks = true
 
   # Makes it possible to change the headers names
   # config.headers_names = {:'access-token' => 'access-token',
   #                        :'client' => 'client',
   #                        :'expiry' => 'expiry',
-  #                        :'uid' => 'uid',
+  #                        :'uuid' => 'uuid',
   #                        :'token-type' => 'token-type' }
 
   # By default, only Bearer Token authentication is implemented out of the box.

@@ -7,7 +7,7 @@ class DeviseTokenAuthCreateScopedUsers < ActiveRecord::Migration[4.2]
     create_table(:scoped_users) do |t|
       ## Required
       t.string :provider, null: false
-      t.string :uid, null: false, default: ''
+      t.string :uuid, null: false, default: ''
 
       ## Database authenticatable
       t.string :encrypted_password, null: false, default: ''
@@ -55,7 +55,7 @@ class DeviseTokenAuthCreateScopedUsers < ActiveRecord::Migration[4.2]
     end
 
     add_index :scoped_users, :email
-    add_index :scoped_users, [:uid, :provider],     unique: true
+    add_index :scoped_users, [:uuid, :provider],     unique: true
     add_index :scoped_users, :reset_password_token, unique: true
     # add_index :scoped_users, :confirmation_token,   :unique => true
     # add_index :scoped_users, :unlock_token,         :unique => true

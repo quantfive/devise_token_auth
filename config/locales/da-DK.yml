@@ -11,7 +11,7 @@ da-DK:
       missing_confirm_success_url: "Der mangler et 'confirm_success_url' parameter."
       redirect_url_not_allowed: "Omdirigering til '%{redirect_url}' er ikke tilladt."
       email_already_exists: "Der eksisterer allerede en konto med '%{email}'"
-      account_with_uid_destroyed: "Kontoen med UID '%{uid}' er slettet."
+      account_with_uuid_destroyed: "Kontoen med uuid '%{uuid}' er slettet."
       account_to_destroy_not_found: "Kan ikke finde kontoen som skal slettes."
       user_not_found: "Brugeren ikke fundet."
     passwords:

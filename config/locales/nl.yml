@@ -11,7 +11,7 @@ nl:
       missing_confirm_success_url: "Parameter 'confirm_success_url' ontbreekt."
       redirect_url_not_allowed: "Redirect naar '%{redirect_url}' niet toegestaan."
       email_already_exists: "Er bestaat al een account voor het adres '%{email}'"
-      account_with_uid_destroyed: "Account met id '%{uid}' is verwijderd."
+      account_with_uuid_destroyed: "Account met id '%{uuid}' is verwijderd."
       account_to_destroy_not_found: "Te verwijderen account niet gevonden."
       user_not_found: "Gebruiker niet gevonden."
     passwords:

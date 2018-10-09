@@ -11,7 +11,7 @@ es:
       missing_confirm_success_url: "El parámetro 'confirm_success_url' no esta presente."
       redirect_url_not_allowed: "Redirección hacia '%{redirect_url}' no esta permitida."
       email_already_exists: "Una cuenta ya existe con este correo electrónico '%{email}'"
-      account_with_uid_destroyed: "La cuenta con el identificador '%{uid}' se ha eliminado."
+      account_with_uuid_destroyed: "La cuenta con el identificador '%{uuid}' se ha eliminado."
       account_to_destroy_not_found: "No se puede encontrar la cuenta a borrar."
       user_not_found: "Usuario no encontrado."
     passwords:

@@ -11,7 +11,7 @@ ro:
       missing_confirm_success_url: "Parametrul 'confirm_success_url' lipsește."
       redirect_url_not_allowed: "Redirecționarea către '%{redirect_url}' nu este permisă."
       email_already_exists: "Un cont cu email '%{email} deja există.'"
-      account_with_uid_destroyed: "Contul cu UID '%{uid}' a fost șters."
+      account_with_uuid_destroyed: "Contul cu uuid '%{uuid}' a fost șters."
       account_to_destroy_not_found: "Nu se poate localiza contul pentru ștergere."
       user_not_found: "Utilizatorul nu a fost găsit."
     passwords:

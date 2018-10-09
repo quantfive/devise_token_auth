@@ -11,7 +11,7 @@ ja:
       missing_confirm_success_url: "'confirm_success_url' パラメータが与えられていません。"
       redirect_url_not_allowed: "'%{redirect_url}' へのリダイレクトは許可されていません。"
       email_already_exists: "'%{email}' のアカウントはすでに存在しています。"
-      account_with_uid_destroyed: "'%{uid}' のアカウントは削除されました。"
+      account_with_uuid_destroyed: "'%{uuid}' のアカウントは削除されました。"
       account_to_destroy_not_found: "削除するアカウントが見つかりません。"
       user_not_found: "ユーザーが見つかりません。"
     passwords:

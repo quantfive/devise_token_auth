@@ -11,7 +11,7 @@ sq:
       missing_confirm_success_url: "Mungon parametri 'confirm_success_url'."
       redirect_url_not_allowed: "Nuk lejohet shkuarja tek adresa '%{redirect_url}'."
       email_already_exists: "Një llogari është regjistruar më parë me adresën '%{email}'"
-      account_with_uid_destroyed: "Llogaria me UID-në '%{uid}' është fshirë."
+      account_with_uuid_destroyed: "Llogaria me uuid-në '%{uuid}' është fshirë."
       account_to_destroy_not_found: "Nuk u gjet llogaria për fshirje."
       user_not_found: "Përdoruesi nuk u gjet."
     passwords:

@@ -11,7 +11,7 @@ fr:
       missing_confirm_success_url: "Le paramètre 'confirm_success_url' est manquant."
       redirect_url_not_allowed: "Redirection vers '%{redirect_url}' n'est pas autorisée."
       email_already_exists: "Un compte existe déjà avec l'adresse e-mail suivante '%{email}'"
-      account_with_uid_destroyed: "Le compte avec l'identifiant '%{uid}' a été supprimé."
+      account_with_uuid_destroyed: "Le compte avec l'identifiant '%{uuid}' a été supprimé."
       account_to_destroy_not_found: "Le compte à supprimer est introuvable."
       user_not_found: "Utilisateur introuvable."
     passwords:

@@ -22,7 +22,7 @@ require 'rails_helper'
 include ActionController::RespondWith
 
 # The authentication header looks something like this:
-# {"access-token"=>"abcd1dMVlvW2BT67xIAS_A", "token-type"=>"Bearer", "client"=>"LSJEVZ7Pq6DX5LXvOWMq1w", "expiry"=>"1519086891", "uid"=>"darnell@konopelski.info"}
+# {"access-token"=>"abcd1dMVlvW2BT67xIAS_A", "token-type"=>"Bearer", "client"=>"LSJEVZ7Pq6DX5LXvOWMq1w", "expiry"=>"1519086891", "uuid"=>"darnell@konopelski.info"}
 
 describe 'Whether access is ocurring properly', type: :request do
   before(:each) do
@@ -110,12 +110,12 @@ describe 'Whether access is ocurring properly', type: :request do
     token = response.headers['access-token']
     expiry = response.headers['expiry']
     token_type = response.headers['token-type']
-    uid = response.headers['uid']
+    uuid = response.headers['uuid']
 
     auth_params = {
       'access-token' => token,
       'client' => client,
-      'uid' => uid,
+      'uuid' => uuid,
       'expiry' => expiry,
       'token_type' => token_type
     }

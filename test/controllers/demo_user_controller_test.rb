@@ -34,7 +34,7 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           @resp_token       = response.headers['access-token']
           @resp_client_id   = response.headers['client']
           @resp_expiry      = response.headers['expiry']
-          @resp_uid         = response.headers['uid']
+          @resp_uuid         = response.headers['uuid']
         end
 
         describe 'devise mappings' do
@@ -67,8 +67,8 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           assert_equal @client_id, @resp_client_id
         end
 
-        it "should return the user's uid in the auth header" do
-          assert_equal @resource.uid, @resp_uid
+        it "should return the user's uuid in the auth header" do
+          assert_equal @resource.uuid, @resp_uuid
         end
 
         it 'should not treat this request as a batch request' do
@@ -528,7 +528,7 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           @resp_token       = response.headers['access-token']
           @resp_client_id   = response.headers['client']
           @resp_expiry      = response.headers['expiry']
-          @resp_uid         = response.headers['uid']
+          @resp_uuid         = response.headers['uuid']
         end
 
         describe 'devise mappings' do
@@ -562,8 +562,8 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           assert @resp_client_id
         end
 
-        it "should return the user's uid in the auth header" do
-          assert @resp_uid
+        it "should return the user's uuid in the auth header" do
+          assert @resp_uuid
         end
       end
 
@@ -579,7 +579,7 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           @resp_token       = response.headers['access-token']
           @resp_client_id   = response.headers['client']
           @resp_expiry      = response.headers['expiry']
-          @resp_uid         = response.headers['uid']
+          @resp_uuid         = response.headers['uuid']
         end
 
         describe 'devise mappings' do
@@ -616,12 +616,12 @@ class DemoUserControllerTest < ActionDispatch::IntegrationTest
           refute_equal @auth_headers['client'], @resp_client_id
         end
 
-        it "should return the user's uid in the auth header" do
-          assert @resp_uid
+        it "should return the user's uuid in the auth header" do
+          assert @resp_uuid
         end
 
-        it "should not return the token user's uid in the auth header" do
-          refute_equal @resp_uid, @auth_headers['uid']
+        it "should not return the token user's uuid in the auth header" do
+          refute_equal @resp_uuid, @auth_headers['uuid']
         end
       end
     end

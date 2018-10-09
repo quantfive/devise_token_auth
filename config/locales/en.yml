@@ -11,7 +11,7 @@ en:
       missing_confirm_success_url: "Missing 'confirm_success_url' parameter."
       redirect_url_not_allowed: "Redirect to '%{redirect_url}' not allowed."
       email_already_exists: "An account already exists for '%{email}'"
-      account_with_uid_destroyed: "Account with UID '%{uid}' has been destroyed."
+      account_with_uuid_destroyed: "Account with uuid '%{uuid}' has been destroyed."
       account_to_destroy_not_found: "Unable to locate account for destruction."
       user_not_found: "User not found."
     passwords:

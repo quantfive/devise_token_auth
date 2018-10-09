@@ -51,7 +51,7 @@ class Overrides::PasswordsControllerTest < ActionDispatch::IntegrationTest
       assert @query_string['override_proof']
       assert @query_string['reset_password']
       assert @query_string['token']
-      assert @query_string['uid']
+      assert @query_string['uuid']
     end
 
     test 'override proof is correct' do

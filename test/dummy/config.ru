@@ -12,7 +12,7 @@ use Rack::Cors do
     origins '*'
     resource '*',
              headers: :any,
-             expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+             expose: ['access-token', 'expiry', 'token-type', 'uuid', 'client'],
              methods: %i[get post options delete put]
   end
 end

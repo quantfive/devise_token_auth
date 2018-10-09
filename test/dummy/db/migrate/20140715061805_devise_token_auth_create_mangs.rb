@@ -43,7 +43,7 @@ class DeviseTokenAuthCreateMangs < ActiveRecord::Migration[4.2]
 
       ## unique oauth id
       t.string :provider
-      t.string :uid, null: false, default: ''
+      t.string :uuid, null: false, default: ''
 
       ## Tokens
       if json_supported_database?
@@ -56,7 +56,7 @@ class DeviseTokenAuthCreateMangs < ActiveRecord::Migration[4.2]
     end
 
     add_index :mangs, :email
-    add_index :mangs, [:uid, :provider],     unique: true
+    add_index :mangs, [:uuid, :provider],     unique: true
     add_index :mangs, :reset_password_token, unique: true
     add_index :mangs, :confirmation_token,   unique: true
     # add_index :mangs, :unlock_token,         :unique => true

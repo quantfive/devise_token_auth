@@ -1,5 +1,5 @@
 ## Email authentication
-If you wish to use email authentication, you must configure your Rails application to send email. [Read here](http://guides.rubyonrails.org/action_mailer_basics.html) for more information.
+If you wish to use email authentication, you must configure your Rails application to send email. [Read here](http://guuides.rubyonrails.org/action_mailer_basics.html) for more information.
 
 I recommend using [mailcatcher](https://mailcatcher.me/) for development.
 

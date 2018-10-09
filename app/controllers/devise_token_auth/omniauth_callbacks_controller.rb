@@ -215,9 +215,9 @@ module DeviseTokenAuth
     end
 
     def get_resource_from_auth_hash
-      # find or create user by provider and provider uid
+      # find or create user by provider and provider uuid
       @resource = resource_class.where(
-        uuid: auth_hash['uid'],
+        uuid: auth_hash['uuid'],
         provider: auth_hash['provider']
       ).first_or_initialize
 

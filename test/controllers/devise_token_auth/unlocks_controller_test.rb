@@ -145,7 +145,7 @@ class DeviseTokenAuth::UnlocksControllerTest < ActionController::TestCase
               @client_id      = @qs['client_id']
               @expiry         = @qs['expiry']
               @token          = @qs['token']
-              @uid            = @qs['uid']
+              @uuid            = @qs['uuid']
               @unlock         = @qs['unlock']
             end
 
@@ -159,7 +159,7 @@ class DeviseTokenAuth::UnlocksControllerTest < ActionController::TestCase
               assert @client_id
               assert @expiry
               assert @token
-              assert @uid
+              assert @uuid
               assert @unlock
             end
 

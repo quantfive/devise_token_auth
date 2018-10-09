@@ -11,7 +11,7 @@ ru:
       missing_confirm_success_url: "Отсутствует параметр 'confirm_success_url'."
       redirect_url_not_allowed: "Переадресация на '%{redirect_url}' не разрешена."
       email_already_exists: "Учетная запись для '%{email}' уже существует"
-      account_with_uid_destroyed: "Учетная запись с uid '%{uid}' удалена."
+      account_with_uuid_destroyed: "Учетная запись с uuid '%{uuid}' удалена."
       account_to_destroy_not_found: "Не удается найти учетную запись для удаления."
       user_not_found: "Пользователь не найден."
     passwords:

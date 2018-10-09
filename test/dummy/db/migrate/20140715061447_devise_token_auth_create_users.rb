@@ -43,7 +43,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[4.2]
 
       ## unique oauth id
       t.string :provider
-      t.string :uid, null: false, default: ''
+      t.string :uuid, null: false, default: ''
 
       ## Tokens
       if json_supported_database?
@@ -56,7 +56,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[4.2]
     end
 
     add_index :users, :email
-    add_index :users, [:uid, :provider],     unique: true
+    add_index :users, [:uuid, :provider],     unique: true
     add_index :users, :reset_password_token, unique: true
     add_index :users, :confirmation_token,   unique: true
     add_index :users, :nickname,             unique: true

@@ -16,7 +16,7 @@ class Overrides::OmniauthCallbacksControllerTest < ActionDispatch::IntegrationTe
       OmniAuth.config.test_mode = true
       OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(
         provider: 'facebook',
-        uid: '123545',
+        uuid: '123545',
         info: {
           name: 'chong',
           email: 'chongbong@aol.com'

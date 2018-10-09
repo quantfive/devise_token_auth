@@ -11,7 +11,7 @@ zh-CN:
       missing_confirm_success_url: "缺少数据 'confirm_success_url'"
       redirect_url_not_allowed: "不支持转向到 '%{redirect_url}'"
       email_already_exists: "邮箱'%{email}'已被使用"
-      account_with_uid_destroyed: "账号 '%{uid}' 已被移除。"
+      account_with_uuid_destroyed: "账号 '%{uuid}' 已被移除。"
       account_to_destroy_not_found: "无法找到目标帐号。"
       user_not_found: "找不到帐号。"
     passwords:

@@ -43,7 +43,7 @@ class DemoGroupControllerTest < ActionDispatch::IntegrationTest
           @resp_token       = response.headers['access-token']
           @resp_client_id   = response.headers['client']
           @resp_expiry      = response.headers['expiry']
-          @resp_uid         = response.headers['uid']
+          @resp_uuid         = response.headers['uuid']
         end
 
         test 'request is successful' do
@@ -93,7 +93,7 @@ class DemoGroupControllerTest < ActionDispatch::IntegrationTest
           @resp_token       = response.headers['access-token']
           @resp_client_id   = response.headers['client']
           @resp_expiry      = response.headers['expiry']
-          @resp_uid         = response.headers['uid']
+          @resp_uuid         = response.headers['uuid']
         end
 
         test 'request is successful' do

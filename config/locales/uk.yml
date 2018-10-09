@@ -11,7 +11,7 @@ uk:
       missing_confirm_success_url: "Немає параметру 'confirm_success_url'"
       redirect_url_not_allowed: "Перенаправлення до '%{redirect_url}' не дозволено."
       email_already_exists: "Акаунт для емейлу '%{email}' вже існує"
-      account_with_uid_destroyed: "Акаунт з UID '%{uid}' було видалено."
+      account_with_uuid_destroyed: "Акаунт з uuid '%{uuid}' було видалено."
       account_to_destroy_not_found: "Неможливо знайти акаунт для видалення."
       user_not_found: "Користувача не знайдено"
     passwords:

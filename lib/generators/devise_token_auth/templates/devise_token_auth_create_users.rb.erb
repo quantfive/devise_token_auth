@@ -4,7 +4,7 @@ class DeviseTokenAuthCreate<%= user_class.pluralize.gsub("::","") %> < ActiveRec
     create_table(:<%= table_name %><%= primary_key_type %>) do |t|
       ## Required
       t.string :provider, :null => false, :default => "email"
-      t.string :uid, :null => false, :default => ""
+      t.string :uuid, :null => false, :default => ""
 
       ## Database authenticatable
       t.string :encrypted_password, :null => false, :default => ""
@@ -48,7 +48,7 @@ class DeviseTokenAuthCreate<%= user_class.pluralize.gsub("::","") %> < ActiveRec
     end
 
     add_index :<%= table_name %>, :email,                unique: true
-    add_index :<%= table_name %>, [:uid, :provider],     unique: true
+    add_index :<%= table_name %>, [:uuid, :provider],     unique: true
     add_index :<%= table_name %>, :reset_password_token, unique: true
     add_index :<%= table_name %>, :confirmation_token,   unique: true
     # add_index :<%= table_name %>, :unlock_token,       unique: true
